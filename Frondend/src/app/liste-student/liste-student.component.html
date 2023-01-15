@@ -1,0 +1,52 @@
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/listestudent">liste des etudiants <span class="sr-only"></span></a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="/listeformation">liste des formations <span class="sr-only"></span></a>
+          </li>
+        
+
+        
+      </ul>
+
+    </div>
+  </nav>
+
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>Photo</th>
+        <th>nom</th>
+        <th>prenom</th>
+        <th>cin</th>
+        <th>email</th>
+        <th>telephone</th>
+        <th>classe</th>
+
+    </tr>
+
+    <tr *ngFor="let p of studentsf">
+
+        <td>{{p.id}}</td>
+        <td><img src="http://localhost:8080/api/getImageStudent/{{p.id}}" width="70" height="70"></td>
+        <td> {{p.nom}}</td>
+        <td> {{p.prenom}}</td>
+        <td>{{p.cin}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.telephone}}</td>
+        <td>{{p.classe.nom}}</td>
+        
+    </tr>
+</table>
